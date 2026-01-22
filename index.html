@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Residual Paths</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="layout">
+    <section class="panel">
+      <header>
+        <h1>Residual Paths</h1>
+        <p class="subtitle">A maze built from your movement history.</p>
+      </header>
+      <div class="hud">
+        <div><span>Moves:</span> <strong id="moves">0</strong></div>
+        <div><span>Crystallized:</span> <strong id="crystallized">0</strong></div>
+        <div><span>Status:</span> <strong id="status">Learning...</strong></div>
+      </div>
+      <div class="controls">
+        <button id="newGame">New Run</button>
+        <button id="reveal">Momentary Reveal</button>
+      </div>
+      <div class="instructions">
+        <h2>How to play</h2>
+        <ul>
+          <li>Move with <strong>WASD</strong> or <strong>arrow keys</strong>.</li>
+          <li>Tiles are neutral until their hidden rule is triggered.</li>
+          <li>Crystallized tiles become walls that persist.</li>
+          <li>Reach the glowing exit without sealing your route.</li>
+        </ul>
+      </div>
+      <div class="note">
+        <p>
+          This maze watches your habits. The pattern you repeat is the pattern it remembers.
+        </p>
+      </div>
+    </section>
+    <section class="stage">
+      <canvas id="board" width="720" height="720" aria-label="Residual Paths game board"></canvas>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
