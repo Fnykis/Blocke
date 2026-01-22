@@ -1,0 +1,133 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background: #0d0f14;
+  color: #e6eefc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: radial-gradient(circle at top, #141826, #0b0d12 60%);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 320px minmax(320px, 720px);
+  gap: 32px;
+  width: min(1100px, 100%);
+  align-items: start;
+}
+
+.panel {
+  background: #131826;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  letter-spacing: 0.04em;
+}
+
+.subtitle {
+  color: #9fb1d1;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.hud {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  color: #c0c9df;
+}
+
+.hud span {
+  color: #7d8aa5;
+  margin-right: 6px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  flex: 1;
+  background: #1e2436;
+  border: 1px solid #2e3851;
+  color: #e6eefc;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  border-color: #4e5d7a;
+}
+
+.instructions {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #b0bdd6;
+}
+
+.instructions ul {
+  margin-top: 10px;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.note {
+  padding: 14px;
+  background: rgba(29, 36, 52, 0.7);
+  border-radius: 12px;
+  font-size: 13px;
+  color: #9faac4;
+}
+
+.stage {
+  background: #0c0f18;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #1f2638;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 16px;
+  background: #101522;
+  box-shadow: inset 0 0 0 1px #1f2638;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .stage {
+    order: -1;
+  }
+}
